@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.HomeFragment"
+        android:label="Welcome to Fit App">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_loginFragment_to_appFragment"
+            app:destination="@id/appFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bmiFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.BmiFragment"
+        android:label="Body Mass Index" />
+    <fragment
+        android:id="@+id/appFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.AppFragment"
+        android:label="Home Page">
+        <action
+            android:id="@+id/action_appFragment_to_bmiFragment"
+            app:destination="@id/bmiFragment"
+            app:popUpTo="@id/appFragment" />
+        <action
+            android:id="@+id/action_appFragment_to_addLogFragment"
+            app:destination="@id/addLogFragment" />
+        <action
+            android:id="@+id/action_appFragment_to_viewLogsFragment"
+            app:destination="@id/viewLogsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_appFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_appFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLogFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.AddLogFragment"
+        android:label="Add Your Log" />
+    <fragment
+        android:id="@+id/viewLogsFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.ViewLogsFragment"
+        android:label="View Logs" >
+        <action
+            android:id="@+id/action_viewLogsFragment_to_addLogFragment"
+            app:destination="@id/addLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.SignUpFragment"
+        android:label="Registration">
+        <action
+            android:id="@+id/action_signUpFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="project.st991497190.vishvakumar.Fragments.ArticleFragment"
+        android:label="Health Article"/>
+</navigation>

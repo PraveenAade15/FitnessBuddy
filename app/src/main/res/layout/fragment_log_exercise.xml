@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="logViewModel"
+            type="com.example.myfitnessbuddy.viewModels.AddLogViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Log Exercise"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.171"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="201dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="136dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:text="Exercise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Exercise" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="250sp"
+            android:layout_height="60sp"
+            android:layout_marginTop="432dp"
+            android:background="@drawable/custom_button_grad_new"
+            android:onClick="@{(view)->logViewModel.onAddButtonClick(view)}"
+            android:text="Add"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="91dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="312dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={logViewModel.input1}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="91dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="312dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={logViewModel.input2}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input3"
+            android:layout_width="91dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="316dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={logViewModel.input3}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.878"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateField"
+            android:layout_width="331dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="224dp"
+            android:ems="10"
+            android:hint="Select exercise date"
+            android:inputType="date"
+            android:text="@={logViewModel.currentDate}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/exerciseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.181"
+            app:srcCompat="@drawable/weightlifting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+    <!--    <data>-->
+    <!--        <variable-->
+    <!--            name="logViewModel"-->
+    <!--            type="project.st991497190.vishvakumar.viewModels.AddLogViewModel" />-->
+    <!--    </data>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent">-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="36dp"-->
+    <!--        android:text="Log Exercise"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textSize="36sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.171"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spinner"-->
+    <!--        android:layout_width="201dp"-->
+    <!--        android:layout_height="47dp"-->
+    <!--        android:layout_marginTop="136dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.166"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView4"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="108dp"-->
+    <!--        android:text="Exercise"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.097"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:text="Exercise" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnAdd"-->
+    <!--        android:layout_width="250sp"-->
+    <!--        android:layout_height="60sp"-->
+    <!--        android:layout_marginTop="432dp"-->
+    <!--        android:background="@drawable/custom_button_grad_new"-->
+    <!--        android:onClick="@{()->logViewModel.onAddButtonClick()}"-->
+    <!--        android:text="Add"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.501"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnDelete"-->
+    <!--        android:layout_width="250sp"-->
+    <!--        android:layout_height="60sp"-->
+    <!--        android:layout_marginTop="508dp"-->
+    <!--        android:background="@drawable/custom_button_grad_new"-->
+    <!--        android:onClick="@{()->logViewModel.onDeleteButtonClick()}"-->
+    <!--        android:text="Delete"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.501"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Switch-->
+    <!--        android:id="@+id/switch1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:text="Edit"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.862"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/input1"-->
+    <!--        android:layout_width="91dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_marginStart="36dp"-->
+    <!--        android:layout_marginTop="312dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="numberDecimal"-->
+    <!--        android:text="@={logViewModel.input1}"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/input2"-->
+    <!--        android:layout_width="91dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_marginTop="312dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="numberDecimal"-->
+    <!--        android:text="@={logViewModel.input2}"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.506"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/input3"-->
+    <!--        android:layout_width="91dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:layout_marginTop="316dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="numberDecimal"-->
+    <!--        android:text="@={logViewModel.input3}"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.878"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/dateField"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="224dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="date"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.174"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--</layout>-->
