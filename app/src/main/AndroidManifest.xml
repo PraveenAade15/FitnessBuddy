@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFitnessBuddy">
-        <activity android:name=".viewModelsFactory.MainActivity">
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".viewModels.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

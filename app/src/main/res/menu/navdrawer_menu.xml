@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/signUpFragment"
+        android:title="@string/signup" />
+    <item
+        android:id="@+id/loginFragment"
+        android:title="@string/login" />
+    <item
+        android:id="@+id/bmiFragment"
+        android:title="@string/bmi" />
+    <item
+        android:id="@+id/addLogFragment"
+        android:title="@string/addLogs" />
+    <item
+        android:id="@+id/viewLogsFragment"
+        android:title="@string/viewLogs" />
+    <item
+        android:id="@+id/articleFragment"
+        android:title="@string/article" />
+    <item
+        android:id="@+id/homeScreenFragment"
+        android:title="@string/logout" />
+</menu>
